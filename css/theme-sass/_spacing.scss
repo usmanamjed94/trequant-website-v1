@@ -1,0 +1,59 @@
+/////////////////////
+// Spacing Helpers //
+/////////////////////
+
+/**
+ * Margin-top
+ */
+
+@for $i from 0 through 5 {
+  .tq-m-t-#{$i * 10} { margin-top: 10px * $i; } }
+
+/**
+ * Margin-bottom
+ */
+
+@for $i from 0 through 5 {
+  .tq-m-b-#{$i * 10} { margin-bottom: 10px * $i; } }
+
+/**
+ * Margin-left
+ */
+
+@for $i from 0 through 5 {
+  .tq-m-l-#{$i * 10} { margin-left: 10px * $i; } }
+
+/**
+ * Margin-right
+ */
+
+@for $i from 0 through 5 {
+  .tq-m-r-#{$i * 10} { margin-right: 10px * $i; } }
+
+/**
+ * Padding-top
+ */
+
+@for $i from 0 through 5 {
+  .tq-p-t-#{$i * 10} { padding-top: 10px * $i; } }
+
+/**
+ * Padding-bottom
+ */
+
+@for $i from 0 through 5 {
+  .tq-p-b-#{$i * 10} { padding-bottom: 10px * $i; } }
+
+/**
+ * Padding-left
+ */
+
+@for $i from 0 through 5 {
+  .tq-p-l-#{$i * 10} { padding-left: 10px * $i; } }
+
+/**
+ * Padding-right
+ */
+
+@for $i from 0 through 5 {
+  .tq-p-r-#{$i * 10} { padding-right: 10px * $i; } }

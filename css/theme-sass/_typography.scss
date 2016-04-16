@@ -1,0 +1,22 @@
+/**
+ * Font files
+ */
+
+/* Helvetica Neue */
+@include font-face('HelveticaNeue', 'fonts/Helvetica/helveticaneue-light-webfont', 400, normal);
+@include font-face('HelveticaNeue', 'fonts/Helvetica/helveticaneue-medium-webfont', 600, normal);
+@include font-face('HelveticaNeueLT', 'fonts/Helvetica/helveticaneuelt-lightext-webfont', normal, normal);
+
+/* Trajan Pro */
+// @include font-face('TrajanPro', 'fonts/TrajanPro/TrajanPro-Regular_0', normal, normal, otf);
+// @include font-face('TrajanPro', 'fonts/TrajanPro/TrajanPro-Bold_0', bold, normal, otf);
+
+/* Styles */
+body, .body-font {
+	font-family: HelveticaNeue, Sans-serif;
+}
+
+h1, h2, .heading-font {
+	font-family: HelveticaNeue, Sans-serif;
+	// font-family: TrajanPro, serif;
+}

@@ -1,0 +1,65 @@
+/**
+ * Buttons
+ */
+.tq-btn-primary { 
+	@include tq-button($tq-green, $tq-green-h); }
+
+.tq-btn-default { 
+	@include tq-button($tq-grey, $tq-grey-h); }
+
+.tq-btn-success { 
+	@include tq-button($tq-blue, $tq-blue-h); }
+
+.tq-btn-info { 
+	@include tq-button($tq-sea-blue, $tq-sea-blue-h); }
+
+.tq-btn-warning { 
+	@include tq-button($tq-yellow, $tq-yellow-h); }
+
+.tq-btn-danger { 
+	@include tq-button($tq-pink-red, $tq-pink-red-h); }
+
+
+/**
+ * Outline Buttons
+ */
+.tq-btn-primary-o { 
+	@include tq-button-o($tq-green, $tq-green-h); }
+
+.tq-btn-default-o { 
+	@include tq-button-o($tq-grey, $tq-grey-h); }
+
+.tq-btn-success-o { 
+	@include tq-button-o($tq-blue, $tq-blue-h); }
+
+.tq-btn-info-o { 
+	@include tq-button-o($tq-sea-blue, $tq-sea-blue-h); }
+
+.tq-btn-warning-o { 
+	@include tq-button-o($tq-yellow, $tq-yellow-h); }
+
+.tq-btn-danger-o { 
+	@include tq-button-o($tq-pink-red, $tq-pink-red-h); }
+
+
+/**
+ * Button Add-ons
+ */
+
+.tq-btn-pill {
+	border-radius: 24px; }
+
+.tq-btn-xlg {
+    padding: 16px 20px;
+    border-width: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.33;
+
+    &.tq-btn-pill {
+	border-radius: 30px;
+	}
+}
+
+.tq-btn-xlg-fixed-w {
+	width: 210px; }

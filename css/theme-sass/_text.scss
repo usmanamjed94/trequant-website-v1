@@ -1,0 +1,10 @@
+/**
+ * Links
+ */
+a {
+	@include tq-link($tq-green, #06866d);
+
+	&.muted {
+		@include tq-link($tq-grey5, #06866d);
+	}
+}

@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Trequant, A watch made with love; for tremor patients.">
+    <meta name="keywords" content="Trequant, Tremors, Essential Tremors Watch, Analytics, Parkinsons Analaytics Wearable">
+    <meta name="author" content="Usman Amjed, Mehdi Raza">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- SITE TITLE -->
+    <title>Trequant | We Care</title>
+
+    <!-- =========================
+     FAV AND TOUCH ICONS AND FONT  
+    ============================== -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+    <!-- =========================
+     STYLESHEETS   
+    ============================== -->
+    <!-- BOOTSTRAP AND ANIMATION -->
+
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .standard-button,
+        .navbar-register-button {
+       filter: none;
+        }
+      </style>
+    <![endif]-->
+
+
+    <style>
+        *, ::after, ::before { box-sizing: border-box; }
+        html { font-family: sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 100%; }
+        body { background-color: rgb(255, 255, 255); font-size: 16px; line-height: 28px; font-weight: 300; color: rgb(49, 49, 49); text-align: center; overflow-x: hidden !important; margin: auto !important; }
+        .body-font, .heading-font, body, h1, h2 { font-family: HelveticaNeue, sans-serif; }
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+        .call-to-action, .features, .header, .stats { background: url(http://localhost/trequant/images/background-images/gp-blue.jpg) 50% 0% / cover no-repeat fixed; }
+        .header { background-color: rgb(12, 87, 143); }
+        .overlay-layer { background: rgba(0, 5, 8, 0.45098); }
+        .header .overlay-layer { padding-top: 84px; padding-bottom: 100px; height: auto; }
+        .navbar { position: relative; min-height: 50px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px; }
+        .navbar-fixed-bottom, .navbar-fixed-top { position: fixed; right: 0px; left: 0px; z-index: 1030; border-radius: 0px; }
+        .navbar-fixed-top { top: 0px; border-width: 0px 0px 1px; }
+        .navbar-inverse { border-color: rgb(8, 8, 8); background-color: rgb(34, 34, 34); }
+        .sticky-navigation { min-height: 70px; border: none; font-weight: 400; backface-visibility: hidden; box-shadow: rgba(50, 50, 50, 0.0784314) 0px 2px 8px 0px; margin-bottom: 0px !important; background: rgb(255, 255, 255); font-size: 13px; }
+        .container, .container-fluid { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; }
+        @media (max-width: 768px) { .container { width: auto; } }
+        @media (min-width: 768px) and (max-width: 992px) { .container { width: 750px; } }
+        @media (min-width: 992px) and (max-width: 1200px) { .container { width: 970px; } }
+        @media (min-width: 1200px) { .container { width: 1170px; } }
+        .navbar-header { float: left; }
+        .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header { margin-right: 0px; margin-left: 0px; }
+        button, input, optgroup, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; margin: 0px; }
+        button { overflow: visible; }
+        button, select { text-transform: none; }
+        button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+        button, input, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
+        .navbar-toggle { position: relative; float: right; margin-right: 15px; padding: 9px 10px; margin-top: 8px; margin-bottom: 8px; border: 1px solid transparent; border-radius: 4px; background-image: none; background-color: transparent; display: none; }
+        .navbar-inverse .navbar-toggle { border-color: rgb(51, 51, 51); }
+        .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0px; overflow: hidden; clip: rect(0px 0px 0px 0px); border: 0px; }
+        a { background-color: transparent; transition: all 0.25s ease; color: rgb(26, 179, 148); text-decoration: none !important; }
+        .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover, a, a:hover { color: rgb(0, 142, 214); }
+        .navbar-brand { float: left; padding: 15px; font-size: 18px; line-height: 20px; height: 50px; }
+        .navbar-inverse .navbar-brand { color: rgb(157, 157, 157); }
+        .sticky-navigation .navbar-brand { padding: 18px 15px; }
+        @media (min-width: 992px){ .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand { margin-left: -15px; } }
+        img { border: 0px; vertical-align: middle; }
+        .navbar-brand > img { display: block; }
+        .sticky-navigation .navbar-brand img { backface-visibility: hidden; max-width: none; }
+        .collapse { display: none; }
+        .navbar-collapse { overflow-x: visible; padding-right: 15px; padding-left: 15px; border-top-width: 0px; border-top-style: solid; border-top-color: transparent; box-shadow: none; width: auto; }
+        .navbar-collapse.collapse { padding-bottom: 0px; display: block !important; height: auto !important; overflow: visible !important; }
+        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse { padding-left: 0px; padding-right: 0px; }
+        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse { max-height: 340px; }
+        .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form { border-color: rgb(16, 16, 16); }
+        ol, ul { margin-top: 0px; margin-bottom: 10px; padding-left: 0px !important; }
+        .nav { margin-bottom: 0px; padding-left: 0px; list-style: none; }
+        .navbar-nav { margin: 0px; float: left; }
+        .navbar-left { float: left !important; }
+        .small-text { font-size: 14px; }
+        .sticky-navigation .main-navigation { margin-top: 0px; }
+        .navbar-nav.navbar-left { margin-left: 30px; }
+        li { list-style: none; }
+        .nav > li, .nav > li > a { position: relative; display: block; }
+        .navbar-nav > li { float: left; }
+        .navbar-nav > li > a { padding-top: 15px; padding-bottom: 15px; line-height: 20px; }
+        .nav > li > a { padding: inherit; }
+        .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-text { color: rgb(157, 157, 157); }
+        .navbar-inverse .navbar-nav > li > a { color: inherit; }
+        .sticky-navigation .main-navigation li a { text-transform: uppercase; line-height: 34px; padding: 18px; position: relative; font-size: 13px; transition: color 0.3s; font-weight: 700; }
+        .navbar-right { margin-right: -15px; float: right !important; }
+        .navbar-nav.navbar-right:last-child { margin-right: 0px; }
+        .btn { display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; touch-action: manipulation; cursor: pointer; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857; border-radius: 4px; -webkit-user-select: none; background-image: none; }
+        .navbar-btn { margin-top: 8px; margin-bottom: 8px; }
+        .tq-btn-danger { border-radius: 5px; border: 1px solid rgb(237, 85, 101); color: rgb(255, 255, 255) !important; background-color: rgb(237, 85, 101); }
+        .tq-btn-pill { border-radius: 24px; }
+        .navbar-fixed-width-btn { width: 120px; margin-top: 17px; margin-bottom: 17px; margin-right: 10px; }
+        .row { margin-left: -15px; margin-right: -15px; }
+        .text-left { text-align: left; }
+        @media (min-width: 992px){
+        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+        .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 { float: left; }
+        .col-md-6 { width: 50%; } 
+        }
+        .intro-section { margin-top: 70px; }
+        h1 { margin: 0.67em 0px; font-size: 3.75rem; line-height: 5rem; }
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+        .h1, .h2, .h3, h1, h2, h3 { margin-top: 20px; margin-bottom: 10px; }
+        .h1, h1 { font-size: 36px; }
+        h1, h2 { font-weight: 400; }
+        .white-text { color: rgb(255, 255, 255); }
+        b, strong { font-weight: 700; }
+        .standard-button, .strong, strong { font-weight: 600; }
+        .tq-m-t-50 { margin-top: 50px; }
+        .tq-btn-xlg { padding: 16px 20px; border-width: 5px; font-size: 20px; font-weight: 700; line-height: 1.33; }
+        .tq-btn-xlg-fixed-w { width: 210px; }
+        .tq-m-l-10 { margin-left: 10px; }
+        .tq-btn-white { border-radius: 5px; border: 1px solid rgb(255, 255, 255); color: rgb(237, 85, 101) !important; background-color: rgb(255, 255, 255); }
+        .tq-btn-xlg.tq-btn-pill { border-radius: 30px; }
+        .text-right { text-align: right; }
+        .pull-right { float: right !important; }
+        .fadeInLeft { animation-name: fadeInLeft; }
+        .imac-image img { width: 100%; margin-top: 60px; }
+        .clearfix:after {content: ""; display: table; clear: both; }
+        .prel {font-size: 3.75rem; line-height: 5rem; } 
+        </style>
+
+        <!-- <link rel="stylesheet" href="css/combined.min.css"> -->
+
+</head>
+
+<body>
+
+    <!-- =========================
+     SECTION: HOME / HEADER  
+    ============================== -->
+    <header class="header" data-stellar-background-ratio="0.5" id="home">
+
+        <!-- COLOR OVER IMAGE -->
+        <div class="overlay-layer">
+
+            <!-- STICKY NAVIGATION -->
+            <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <!-- LOGO ON STICKY NAV BAR -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#stamp-navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-grid-2x2"></span>
+                        </button>
+
+                        <!-- LOGO -->
+                        <a class="navbar-brand" href="#">
+                            <img src="images/page1/logo.png" alt="">
+                        </a>
+
+                    </div>
+
+                    <!-- TOP BAR -->
+                    <div class="navbar-collapse collapse" id="stamp-navigation">
+
+                        <!-- NAVIGATION LINK -->
+                        <ul class="nav navbar-nav navbar-left main-navigation small-text">
+                            <li style="display: none;"><a href="#home">Home</a>
+                            </li>
+                            <li><a href="#tremors">Trequant?</a>
+                            </li>
+                            <li><a href="#features">Features</a>
+                            </li>
+                            <li><a href="#design">Design</a>
+                            </li>
+                            <li><a href="#analytics">Analytics</a>
+                            </li>
+                            <li><a href="#testimonials">Testimonials</a>
+                            </li>
+                            <!-- <li><a href="http://example.com" class="external">External Link Example</a></li> -->
+                        </ul>
+
+                        <!-- LOGIN REGISTER -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--<li><button class="btn tq-btn-primary-o tq-btn-pill navbar-btn navbar-fixed-width-btn">Login</button>
+                            </li> -->
+                            <li><button class="btn tq-btn-danger tq-btn-pill navbar-btn navbar-fixed-width-btn" data-toggle="modal" data-target="#subscribe-modal">Pre-Order Now</button>
+                            </li>
+<!--                             <li class="register-button js-register inpage-scroll"><a href="#subscribe" class="navbar-register-button">Get Started</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- /END CONTAINER -->
+            </div>
+            <!-- /END STICKY NAVIGATION -->
+
+            <!-- CONTAINER -->
+            <div class="container clearfix">
+
+                <!-- ONLY LOGO ON HEADER 
+                      <div class="only-logo">
+                         <div class="navbar">
+                                <div class="navbar-header">
+                                   <img src="images/logo-2.png" alt="">
+                                </div>
+                         </div>
+                      </div>
+                      /END ONLY LOGO ON HEADER -->
+
+                <div class="row">
+                    <div class="col-md-6 text-left">
+
+                        <!-- HEADING AND BUTTONS -->
+                        <div class="intro-section">
+
+                            <!-- WELCOM MESSAGE -->
+                            <h1 class="intro white-text"><img src="images/trequant-text.png" alt=""></h1>
+                            <h1 class="prel white-text body-font">a watch made with</h1>
+                            <h1 class="prel white-text body-font">love, for</h1>
+                            <h1 class="prel white-text body-font"><strong>Tremor Patients</strong></h1>
+                            
+                            <!-- BUTTON -->
+                            <div class="button tq-m-t-50">
+                                <!--<a href="#subscribe" class="btn tq-btn-xlg tq-btn-xlg-fixed-w tq-btn-primary-o tq-btn-pill transparent-bg inpage-scroll">WATCH VIDEO <span class="icon icon-arrow-triangle-right"></span></a>-->
+                                <a  class="btn tq-btn-xlg tq-btn-xlg-fixed-w tq-btn-white tq-btn-pill tq-m-l-10 inpage-scroll" data-toggle="modal" data-target="#subscribe-modal">Pre-Order Now</a>
+                            </div>
+                            <!-- /END BUTTON -->
+                            
+                        </div>
+
+                    </div>
+                    
+                    <!-- IMAC IMAGE -->
+                    <div class="col-md-6 text-right">
+                        <div class="imac-image pull-right hidden-sm hidden-xs">
+                            <img src="images/page1/watch.png" class="wow fadeInLeft" data-wow-duration="4s" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==========================
+     END OF ABOVE-THE-FOLD CONTENT
+     Let's inject our full CSS and 
+     continue with rest of page
+    =============================== -->
+
+    <script>
+    // LoadCSS, Filament Group, '15
+    (function(f){f.loadCSS=function(h,c,k){var d=f.document,b=d.createElement("link"),a;c?a=c:(a=(d.body||d.getElementsByTagName("head")[0]).childNodes,a=a[a.length-1]);var g=d.styleSheets;b.rel="stylesheet";b.href=h;b.media="only x";a.parentNode.insertBefore(b,c?a:a.nextSibling);var e=function(a){for(var d=b.href,c=g.length;c--;)if(g[c].href===d)return a();setTimeout(function(){e(a)})};b.onloadcssdefined=e;e(function(){b.media=k||"all"});return b}})(this);
+    loadCSS( "css/combined.min.css" );
+    </script>
+
+
+    <!-- =========================
+     SECTION: CLIENTS LOGOs
+    ============================== -->
+    <div class="clients white-bg">
+        <ul class="client-logos">
+            <li class="crossfade logo1">
+                <a href="http://www.jumpstartpakistan.com" alt="Jump Start Pakistan">
+                    <div class="logo1b after"></div>
+                </a>
+            </li>
+            <li class="crossfade logo2">
+                <a href="http://thenestio.com/" alt="The Nest">
+                    <div class="logo2b after"></div>
+                </a>
+            </li>
+            <li class="crossfade logo3">
+                <a href="http://pashaictawards.com/" alt="Pasha ICT Awards">
+                    <div class="logo3b after"></div>
+                </a>
+            </li>
+            <li class="crossfade logo4">
+                <a href="http://plan9.pitb.gov.pk/" alt="Plan9">
+                    <div class="logo4b after"></div>
+                </a>
+            </li>
+            <li class="crossfade logo5">
+                <a href="http://www.shifa.com.pk/" alt="Shifa International Hospital">
+                    <div class="logo5b after"></div>
+                </a>
+            </li>
+            <li class="crossfade logo0">
+                <a href="http://www.apicta.org/" alt="Asia Pacific ICT Alliance Awards">
+                    <div class="logo0b after"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================
+     SECTION: BRIEF RIGHT
+    ============================== -->
+    <section class="brief tq-brief grey-bg tq-p-t-40 tq-p-b-50" id="tremors">
+        <img src="images/page2/hand.png" class="tq-brief-img-left hidden-sm hidden-xs wow fadeInLeft" data-wow-offset="20" data-wow-duration="1.75s">
+
+        <div class="container">
+            <!-- SECTION HEADER -->
+
+            <div class="section-header tq-m-t-40 tq-m-b-10">
+
+                <div class="small-text-medium uppercase colored-text tq-red-fg">
+                    TREMORS
+                </div>
+                <h2><strong class="white-text body-font">How does trequant help you?</strong></h2>
+                <div class="colored-line tq-red-bg" style="height:4px;">
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- BRIEF HEADING -->
+                <div class="col-md-6 col-md-offset-6 content-section wow fadeInRight" data-wow-offset="20" data-wow-duration="1.75s">
+
+                    <p class="text-left white-text tq-brief-content-lg">
+
+                        Tremors is a neurological condition; in which your hands, head or legs shake unintentionally. Until now; people with such condition found it hard to get an assessment.  We at Trequant know how a patient feels about their condition, and our aim is to make them independent. Trequant’s Tremor Quantifying device not only helps in effective self assessment but also keeps the doctors and families updated with the reports.
+
+                        We have designed a device that draws no attention to it and definitely does not look like a medical aid. Our device looks like a conventional wrist-watch; this protects the patient’s privacy and saves them from intriguing questions by onlookers.
+
+                        The device has the ability to be synced with modern smart phones/laptops via Bluetooth. A dedicated application works on tracking and analyzing the tremor patterns. The data is then saved on cloud and ready to be shared with doctors and family members. Let's take back control.
+
+
+                    </p>
+
+                    <p class="text-left">
+                        <a class="btn tq-btn-danger tq-btn-pill tq-p-l-20 tq-p-r-20" href="https://en.wikipedia.org/wiki/Tremor">Learn More About Tremors.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+     SECTION: BENEFITS   
+    ============================== -->
+    <section class="unique-features white-bg tq-sec3-bg white-text tq-p-b-0" id="features">
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text tq-blue-fg">
+                    FEATURES
+                </div>
+                <h2><strong class="white-text body-font">How does our watch help you?</strong></h2>
+                <div class="colored-line tq-blue-bg tq-line">
+                </div>
+            </div>
+
+            <!-- FIRST ROW OF FEATURES -->
+            <div class="row">
+                <div class="col-md-4 wow fadeInRight" data-wow-duration="1.75s" data-wow-offset="20">
+
+                    <!-- Battery FEATURE -->
+                    <div class="feature tq-sec3-feature tq-m-t-0">
+                        <div class="icon-container">
+                            <span class="icon-basic-battery-half colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Long Battery Life</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                                Bluetooth Low Energy lets you track your tremors for upto two days.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Full Day Backup -->
+                    <div class="feature tq-sec3-feature">
+                        <div class="icon-container">
+                            <span class="icon-basic-download colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Full Day Backup</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                                Don't have a smartphone? The watch keeps a backup upto a full day. Connect once and sync your data to our cloud.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sleep Monitoring + Alarms FEATURE -->
+                    <div class="feature tq-sec3-feature">
+                        <div class="icon-container">
+                            <span class="icon-clock-alt colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Sleep Monitoring + Alarms</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                                Monitor your sleep automatically and set silent vibrating alarms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Watch Image -->
+                <div class="col-md-4">
+                    <div class="ipad-image wow bounceIn" data-wow-duration="1.75s" data-wow-offset="20">
+                        <img src="images/page3/page3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4 wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="20">
+
+                    <!-- Inovative Design -->
+                    <div class="feature tq-sec3-feature tq-m-t-0">
+                        <div class="icon-container">
+                            <span class="icon-gift-alt colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Innovative Design</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                                Want to see your battery life? Just glance at the ring on the watch face; its that simple.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vibrating Notifications Feature -->
+                    <div class="feature tq-sec3-feature">
+                        <div class="icon-container">
+                            <span class="icon-social-spotify colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Vibrating Notifications</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                               Be notified about incoming calls, messages, time of your medicine by a gentle tap on your wrist.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Continuous Tremor Monitoring FEATURE -->
+                    <div class="feature tq-sec3-feature">
+                        <div class="icon-container">
+                            <span class="icon-basic-anticlockwise colored-text tq-sec3-icon"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4>Continuous Tremor Monitoring</h4>
+                            <div class="grey-line-short pull-left tq-blue-bg tq-line">
+                            </div>
+                            <p class="text-left">
+                                Trequant Watch does not rest, even when you do. It cares.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="design" class="gallery">
+        <div id="watchGallery" class="owl-carousel" data-slider-id="1">
+            <div class="item">
+              <img class="owl-lazy" src="images/page4/twatch1.jpg" data-src="images/page4/watch1.jpg" data-src-retina="images/page4/watch1.jpg" alt="Trequant Designer Watch Face One">
+            </div>
+            <div class="item">
+              <img class="owl-lazy" src="images/page4/twatch2.jpg" data-src="images/page4/watch2.jpg" data-src-retina="images/page4/watch2.jpg" alt="Trequant Designer Watch Face Two">
+            </div>
+            <div class="item">
+              <img class="owl-lazy" src="images/page4/twatch3.jpg" data-src="images/page4/watch3.jpg" data-src-retina="images/page4/watch3.jpg" alt="Trequant Designer Watch Face Three">
+            </div>
+            <div class="item">
+              <img class="owl-lazy" src="images/page4/twatch4.jpg" data-src="images/page4/watch4.jpg" data-src-retina="images/page4/watch4.jpg" alt="Trequant Designer Watch Face Four">
+            </div>
+            <div class="item">
+              <img class="owl-lazy" src="images/page4/twatch5.jpg" data-src="images/page4/watch5.jpg" data-src-retina="images/page4/watch5.jpg" alt="Trequant Designer Watch Face Five">
+            </div>
+        </div>
+        <div class="trans-msg text-left">
+            <h3 class="white-text"><strong>Classic Design</strong></h3>
+            <p class="white-text">Trequant stays true to the timeless form of the classic wristwatch. A round design maximizes
+            the clock area while ensuring a comfortable fit. It seems like a normal watch and blends in. You can remain informed related to your
+            battery-life in a seamless manner.</p>
+        </div>
+    </div>
+
+    <!-- =========================
+     SECTION: SCREENSHOTS
+    ============================== -->
+    <section class="features tq-p-b-50" id="analytics">
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text">
+                    YOUR DATA AT YOUR FINGERTIPS
+                </div>
+                <h2 class="white-text"><span class="strong white-text body-font">Everything about your tremors, all in one place</span></h2>
+                <div class="colored-line tq-line">
+                </div>
+                <div class="sub-heading white-text">
+                    A SEAMLESS APP EXPERIENCE FROM YOUR DEVICES TO DASHBOARD
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- LEFT SIDE ELEMENTS -->
+                <div class="clearfix col-md-3 text-right left-side wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+
+                    <!-- Easy Scale -->
+                    <div class="single-feature border-right-colored">
+                        <h4 class="colored-text"><strong>Easy Scale</strong></h4>
+                        <p>
+                           Know how your tremors have been in one look with a simple scale.
+                        </p>
+                    </div>
+
+                    <!-- Easy to Use Apps -->
+                    <div class="single-feature border-right-colored">
+                        <h4 class="colored-text"><strong>Simple Apps</strong></h4>
+                        <p>
+                            We made an effort to make our applications as easy to use as possible. Just for you.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- SCREENSHOTS -->
+                <div class="col-md-6">
+                    <div id="screenshots" class="owl-carousel owl-theme">
+
+                        <!-- Software Shot One -->
+                        <div class="screenshot">
+                            <a href="images/page5/software2.png" data-lightbox-gallery="gallery1">
+                                <img src="images/page5/software2.png" alt="" />
+                            </a>
+                        </div>
+
+                        <!-- Software Shot Two -->
+                        <div class="screenshot">
+                            <a href="images/page5/software1.png" data-lightbox-gallery="gallery1">
+                                <img src="images/page5/software1.png" alt="" />
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- RIGHT SIDE FEATURES -->
+                <div class="col-md-3 text-left right-side wow fadeInLeft" data-wow-offset="10" data-wow-duration="1.75s">
+
+                    <!-- SINGLE ELEMENT -->
+                    <div class="single-feature border-left-colored">
+                        <h4 class="colored-text"><strong>Medication</strong></h4>
+                        <p>
+                            Add your medications; get alerts to take them; and know how they affected your tremors for the past month/year/week.
+                        </p>
+                    </div>
+
+                    <!-- SINGLE ELEMENT -->
+                    <div class="single-feature border-left-colored">
+                        <h4 class="colored-text"><strong>Forums</strong></h4>
+                        <p>
+                            Discuss your issues with people having similar condition. A communication platform purpose built for your needs.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+<!--     =========================
+     SECTION: TESTIMONIALS   
+    ============================== -->
+    <section class="testimonials white-bg" id="testimonials">
+        <div class="container">
+    
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text">
+                    Testimonials
+                </div>
+                <h2 class="dark-text"><strong>Happy</strong> Users</h2>
+                <div class="colored-line">
+                </div>
+                <div class="sub-heading">
+                    Those who tested our device; simply loved it. And we loved them for helping us.
+                </div>
+            </div>
+    
+            <div class="row no-gutters">
+    
+
+                <div class="col-md-4 wow fadeInLeft" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="feedback">
+                        <div class="pic-container">
+                            <div class="danish"></div>
+                        </div>
+                        <p>
+                            “There are over 3 million people suffering from tremor disorder in United States, and a tremor device will have a huge impact in the way we handle tremor patients. ”
+                        </p>
+                        <h5 class="colored-text">Dr. Danish Ejaz Bhatti</h5>
+                        <div class="small-text">
+                            University of Nebraska Medical Centre, Omaha, Nebraska, United States of America.
+                        </div>
+                    </div>
+                </div>
+    
+
+                <div class="col-md-4 wow fadeIn" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="feedback border-left border-right">
+                        <div class="pic-container">
+                            <div class="maimoona"></div>
+                        </div>
+                        <p>
+                            “This device will not only help in diagnostics but also in guiding therapy, moreover; its very practical, handy and useful.”
+                        </p>
+                        <h5 class="colored-text">Dr. Maimoona</h5>
+                        <div class="small-text">
+                            Head of Department - Department of Neurology Sciences Shifa Hospital, Islamabad, Pakistan.
+                        </div>
+                    </div>
+                </div>
+    
+
+                <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div id="feedback">
+                        <div class="feedback">
+                            <div class="pic-container">
+                                <div class="maajid"></div>
+                            </div>
+                            <p>
+                                “I am very excited about this device because it has tremendous potential for people like me.”
+                            </p>
+                            <h5 class="colored-text"> Maajid Maqbool</h5>
+                            <div class="small-text">
+                                Tremor Patient, Assistant Professor at SEECS, NUST.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+<!--=========================
+     SECTION: CALL TO ACTION   
+    ============================== -->
+    <section class="call-to-action" id="subscribe" data-stellar-background-ratio="0.1">
+        <div class="overlay-layer-2">
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-md-8 col-md-offset-2">
+    
+                        <div class="uppercase colored-text strong">
+                            Are you interested?
+                        </div>
+    
+                        <h2 class="white-text strong wow fadeInLeft" data-wow-duration="2s" data-wow-offset="40">We are launching; real soon. Pre-Order away &amp; help us!</h2>
+    
+                        <button class="btn btn-primary tq-btn-xlg tq-btn-white tq-btn-pill tq-btn-xlg-fixed-w wow fadeInRight" data-wow-duration="2s" data-wow-offset="40" type="button" data-toggle="modal" data-target="#subscribe-modal">Pre-Order</button>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- REGISTRATION FORM FOR POPUP BOX -->
+    <div class="modal fade bs-example-modal-sm" id="subscribe-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="vertical-registration-form">
+                    <h4 class="dark-text form-heading">Pre-Order Information</h4>
+                    <form class="registration-form mailchimp" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                        <div class="form-group"><input type="text" id="mce-FNAME" name="FNAME" class="form-control input-box" minlength="2" placeholder="First Name" required></div>
+                        <div class="form-group"><input type="text" id="mce-LNAME" name="LNAME" class="form-control input-box" minlength="2" placeholder="Last Name" required></div>
+                        <div class="form-group"><input type="tel" id="mce-PHONE" name="PHONE" class="form-control input-box" minlength="9" placeholder="Phone number (optional)"></div>
+                        <div class="form-group"><input type="url" id="mce-FID" name="FID" class="form-control input-box" placeholder="Copy &amp; Paste your Facebook ID here (optional)"></div>
+                        <div class="form-group"><input type="email" id="mce-EMAIL" name="EMAIL" class="form-control input-box" placeholder="Email" required></div>
+                        <div class="form-group">
+                            <select name="NUMORDERS" id="mce-NUMORDERS" class="form-control input-box" required>
+                                <option value="" disabled selected>No. of orders</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><input type="number" class="form-control input-box" id="mce-MMERGE6" name="MMERGE6" min="10" max="100" placeholder="Age" required></div>
+                        <div class="form-group"><input type="text" class="form-control input-box" value="" name="COUNTRY" placeholder="Country" id="mce-COUNTRY" required></div>
+                        <div class="mailchimp-buttons">
+                            <button class="btn tq-btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn tq-btn-primary" value="Pre-Order Now!" />                           
+                        </div>
+                    </form>
+                    <p class="email-success dark-text">
+                        <span class="icon-check-alt2 colored-text"></span>Email sent successfully!
+                    </p>
+                    <p class="email-error dark-text">
+                        <span class="icon-close-alt2"></span>Error! Please check all fields filled correctly
+                    </p>
+                    <!-- MAILCHIMP ALERTS -->
+                    <p class="mailchimp-processing text-center" style="display:none;">
+                        <img src="images/trequant-loader.gif" alt="Loading...">
+                    </p>
+                    <p class="mailchimp-success dark-text"><span class="icon-check-alt2 colored-text"></span> We sent the confirmation to your email</p>
+                    <p class="mailchimp-error dark-text"><span class="icon-close-alt2"></span> Error! Please check all fields filled correctly</p>
+                    <p class="mailchimp-network dark-text" style="display:none;"><span class="icon-close-alt2"></span> Error! Please check your network connection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- FOOTER -->
+    <footer class="footer grey-bg">
+        ©2015 Trequant LLC. All Rights Reserved
+        <br/>
+        <br/>
+        <!-- SOCIAL ICONS -->
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/TremorQuantifier"><span class="icon-social-facebook transparent-text-dark"></span></a>
+            </li>
+            <li><a href="https://twitter.com/trequantifier"><span class="icon-social-twitter transparent-text-dark"></span></a>
+            </li>
+        </ul>
+
+    </footer>
+
+    <!-- =========================
+     SCRIPTS   
+    ============================== -->
+    <script>
+    /*!
+      * $script.js JS loader & dependency manager
+      * https://github.com/ded/script.js
+      * (c) Dustin Diaz 2014 | License MIT
+      */
+    (function(e,t){typeof module!="undefined"&&module.exports?module.exports=t():typeof define=="function"&&define.amd?define(t):this[e]=t()})("$script",function(){function p(e,t){for(var n=0,i=e.length;n<i;++n)if(!t(e[n]))return r;return 1}function d(e,t){p(e,function(e){return!t(e)})}function v(e,t,n){function g(e){return e.call?e():u[e]}function y(){if(!--h){u[o]=1,s&&s();for(var e in f)p(e.split("|"),g)&&!d(f[e],g)&&(f[e]=[])}}e=e[i]?e:[e];var r=t&&t.call,s=r?t:n,o=r?e.join(""):t,h=e.length;return setTimeout(function(){d(e,function t(e,n){if(e===null)return y();!n&&!/^https?:\/\//.test(e)&&c&&(e=e.indexOf(".js")===-1?c+e+".js":c+e);if(l[e])return o&&(a[o]=1),l[e]==2?y():setTimeout(function(){t(e,!0)},0);l[e]=1,o&&(a[o]=1),m(e,y)})},0),v}function m(n,r){var i=e.createElement("script"),u;i.onload=i.onerror=i[o]=function(){if(i[s]&&!/^c|loade/.test(i[s])||u)return;i.onload=i[o]=null,u=1,l[n]=2,r()},i.async=1,i.src=h?n+(n.indexOf("?")===-1?"?":"&")+h:n,t.insertBefore(i,t.lastChild)}var e=document,t=e.getElementsByTagName("head")[0],n="string",r=!1,i="push",s="readyState",o="onreadystatechange",u={},a={},f={},l={},c,h;return v.get=m,v.order=function(e,t,n){(function r(i){i=e.shift(),e.length?v(i,r):v(i,t,n)})()},v.path=function(e){c=e},v.urlArgs=function(e){h=e},v.ready=function(e,t,n){e=e[i]?e:[e];var r=[];return!d(e,function(e){u[e]||r[i](e)})&&p(e,function(e){return u[e]})?t():!function(e){f[e]=f[e]||[],f[e][i](t),n&&n(r)}(e.join("|")),v},v.done=function(e){v([null],e)},v})
+
+    $script('https://code.jquery.com/jquery-1.9.1.min.js', function () {
+        $script('js/combined.min.js')
+    })
+    </script>
+    <!-- // <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <!--<script>
+        /* PRE LOADER */
+        // jQuery(window).load(function () {
+        //     "use strict";
+        //     jQuery(".status").fadeOut();
+        //     jQuery(".preloader").delay(1000).fadeOut("slow");
+        // })
+    </script>-->
+
+    <!-- // <script src="js/combined.min.js"></script> -->
+</body>
+
+</html>
